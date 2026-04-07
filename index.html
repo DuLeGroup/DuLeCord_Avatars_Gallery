@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designer Portfolio</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Ubuntu&display=swap");
+
+        * {
+            overflow-x: hidden !important;
+        }
+
+        :root {
+            --primary: #00089a;
+            --secondary: #073a0f;
+            --light-primary: #5c3fff;
+            --light-secondary: #2eff46;
+        }
+
+        body {
+            color: #eee;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 300 !important;
+            font-style: normal;
+            margin: 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            /* background: rgb(53,21,93);  */
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            overflow-x: hidden;
+            width: 100vw;
+        }
+
+        .card {
+            max-width: 20em;
+            min-width: 90px;
+            width: fit-content;
+            padding: 0.375rem 0.5rem;
+            border: 1px var(--primary) solid;
+            border-radius: 15px;
+            box-shadow: 0px 0px 12.5px rgb(85, 75, 76);
+            background-color: var(--light-primary);
+            background: linear-gradient(0deg,
+                    var(--light-primary) 0%,
+                    var(--light-secondary) 100%);
+            margin: 10px;
+        }
+
+        .card-img {
+            aspect-ratio: 1/1;
+            border-radius: 8px;
+            border: transparent;
+            width: 100%;
+            height: auto;
+        }
+
+        header {
+            width: 100vw;
+            min-height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #about {
+            width: max-content;
+            display: flex;
+            justify-content: center;
+        }
+
+        #recent {
+            width: max-content;
+            display: flex;
+            justify-content: center;
+        }
+
+        #Name {
+            display: block;
+            /* height: 7rem; */
+        }
+
+        #upLine {
+            display: flex;
+            width: 100vw;
+            flex-wrap: wrap;
+        }
+
+        #projects {
+            padding-top: 90px;
+        }
+
+        #avatarka {
+            aspect-ratio: 1/1;
+            height: 6rem !important;
+            display: block;
+            width: auto;
+            border: transparent;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px rgb(255, 135, 155);
+            float: left;
+            margin: 7.5px;
+        }
+
+        @media (hover: hover) {
+            #Name:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .d-flex {
+            display: flex !important;
+            flex-wrap: wrap;
+        }
+
+        .jc-evenly {
+            justify-content: space-evenly !important;
+        }
+
+        footer {
+            width: 100vw;
+            min-height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(1, 1, 112);
+        }
+
+        .link {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 1s ease-in-out;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+            color: #c2a2ff;
+        }
+
+        #about {
+            position: relative;
+            right: 0;
+        }
+
+        #recent {
+            position: relative;
+            right: 0;
+        }
+
+        #projects {
+            position: relative;
+            left: 0;
+        }
+
+        #recent,
+        #projects {
+            animation: startFromLeft 500ms ease-out;
+        }
+
+        #about {
+            animation: startFromRight 500ms ease-out;
+        }
+
+        @keyframes startFromLeft {
+            0% {
+                position: relative;
+                left: 102vw;
+            }
+
+            100% {
+                position: relative;
+                left: 0;
+            }
+        }
+
+        @keyframes startFromRight {
+            0% {
+                position: relative;
+                right: 102vw;
+            }
+
+            100% {
+                position: relative;
+                right: 0;
+            }
+        }
+
+        @keyframes fun-spin {
+            0%{
+                position: relative;
+                transform: rotate(0deg);
+            }
+            5%{
+                position: relative;
+                transform: rotate(-5deg);
+            }
+            50%{
+                position: relative;
+                transform: rotate(179deg);
+            }
+            51%{
+                position: relative;
+                transform: rotate(181deg);
+            }
+            90%{
+                position: relative;
+                transform: rotate(360deg);
+            }
+            95%{
+                position: relative;
+                transform: rotate(365deg);
+            }
+            100%{
+                position: relative;
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fun-spin2 {
+            0%{
+                position: relative;
+                transform: rotate(0deg);
+            }
+            100%{
+                position: relative;
+                transform: rotate(360deg);
+            }
+        }
+        
+        h1:hover ~ *>.card{
+            animation: fun-spin 1000ms linear;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+    <main>
+        <div id="upLine" class="jc-evenly">
+            <div id="about">
+                <div>
+                    <div id="Name">
+                        <img src="default.jpeg" id="avatarka" alt="" />
+                        <h1>name</h1>
+                    </div>
+                    <p id="aboutText" style="max-width: 25rem; word-wrap: break-word">
+                        СЛАВА ДУЛЕКОРДУ, amet consectetur adipisicing elit. Vel
+                        expedita iusto reprehenderit necessitatibus, laudantium animi
+                        eveniet quam eum nisi labore quidem minus facere ea voluptatem,
+                        illo repellendus ex aspernatur rerum?
+                    </p>
+                </div>
+            </div>
+            <div id="recent">
+                <div class="card">
+                    <img src="default2.jpeg" alt="" class="card-img">
+                    <h1>СЛАВА ДУЛЕКОРДУ</h1>
+                    <p>
+                        СЛАВА ДУЛЕКОРДУ amet consectetur adipisicing elit. Odit
+                        magni fugiat ad ea odio placeat omnis nulla corporis animi. Eius
+                        odit, neque reiciendis delectus amet aut nostrum unde ducimus
+                        quasi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <h1 style="text-align: center;">All Projects</h1>
+            <div class="d-flex jc-evenly">
+                <div class="card">
+                    <img src="default.jpeg" alt="" class="card-img">
+                    <h1>СЛАВА ДУЛЕКОРДУ</h1>
+                    <p>
+                        СЛАВА ДУЛЕКОРДУ amet consectetur adipisicing elit. Sequi
+                        vitae reprehenderit quo aspernatur ullam quisquam est dicta autem
+                        exercitationem ipsam blanditiis, sint at, maiores repudiandae
+                        repellat commodi fuga labore doloribus.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="default2.jpeg" alt="" class="card-img">
+                    <h1>СЛАВА ДУЛЕКОРДУ</h1>
+                    <p>
+                        СЛАВА ДУЛЕКОРДУ amet consectetur adipisicing elit. Sequi
+                        vitae reprehenderit quo aspernatur ullam quisquam est dicta autem
+                        exercitationem ipsam blanditiis, sint at, maiores repudiandae
+                        repellat commodi fuga labore doloribus.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="default3.jpeg" alt="" class="card-img">
+                    <h1>СЛАВА ДУЛЕКОРДУ</h1>
+                    <p>
+                        СЛАВА ДУЛЕКОРДУ amet consectetur adipisicing elit. Sequi
+                        vitae reprehenderit quo aspernatur ullam quisquam est dicta autem
+                        exercitationem ipsam blanditiis, sint at, maiores repudiandae
+                        repellat commodi fuga labore doloribus...
+                    </p>
+                </div>
+
+
+
+                <div class="card">
+                    <img src="default4.jpeg" alt="" class="card-img">
+                    <h1>СЛАВА ДУЛЕКОРДУ</h1>
+                    <p>
+                        СЛАВА ДУЛЕКОРДУ amet consectetur adipisicing elit. Sequi
+                        vitae reprehenderit quo aspernatur ullam quisquam est dicta autem
+                        exercitationem ipsam blanditiis, sint at, maiores repudiandae
+                        repellat commodi fuga labore doloribus.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="default5.jpeg" alt="" class="card-img">
+                    <h1>СЛАВА ДУЛЕКОРДУ</h1>
+                    <p>
+                        СЛАВА ДУЛЕКОРДУ amet consectetur adipisicing elit. Sequi
+                        vitae reprehenderit quo aspernatur ullam quisquam est dicta autem
+                        exercitationem ipsam blanditiis, sint at, maiores repudiandae
+                        repellat commodi fuga labore doloribus.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="default6.jpeg" alt="" class="card-img">
+                    <h1>СЛАВА ДУЛЕКОРДУ</h1>
+                    <p>
+                        СЛАВА ДУЛЕКОРДУ amet consectetur adipisicing elit. Sequi
+                        vitae reprehenderit quo aspernatur ullam quisquam est dicta autem
+                        exercitationem ipsam blanditiis, sint at, maiores repudiandae
+                        repellat commodi fuga labore doloribus...
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="default7.jpeg" alt="" class="card-img">
+                    <h1>СЛАВА ДУЛЕКОРДУ</h1>
+                    <p>
+                        СЛАВА ДУЛЕКОРДУ amet consectetur adipisicing elit. Sequi
+                        vitae reprehenderit quo aspernatur ullam quisquam est dicta autem
+                        exercitationem ipsam blanditiis, sint at, maiores repudiandae
+                        repellat commodi fuga labore doloribus.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <h1>DuLeGoup&copy; | Site Created By <a class="link" href="https://github.com/Nikleof79">nikleof</a></h1>
+    </footer>
+</body>
+
+</html>
